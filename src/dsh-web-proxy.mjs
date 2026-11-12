@@ -789,7 +789,7 @@ function bridgeCompressed(req, client) {
     if (pendingBytes + data.length > 8 * 1024 * 1024) { c.errors++; closeAll('queue-overflow'); return }
     pending.push({ data, binary: isBinary }); pendingBytes += data.length
   })
-  // 串行发送队列（确认驱动）：一次只在途一帧。没有 pause/resume，也就没有"忘了恢复"。
+  // 串行发送队列（send 回调驱动）：一次只等本地一帧写完；不是远端业务 ACK。
   const toClient = []
   let qBytes = 0
   let sending = false

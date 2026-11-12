@@ -83,7 +83,7 @@ See `node src/dsh-web-proxy.mjs --help` for all environment variables and switch
 - Authentication belongs to the entry layer, not this proxy.
 - The DSH cookie is stored locally with mode `0600`.
 - RPC caching is restricted to an explicit read-only allowlist and is invalidated before write-like methods.
-- WebSocket compression uses a confirmation-driven serial queue. If its bounded queue is exceeded, the connection closes with `1011` instead of silently stalling or growing without limit.
+- WebSocket compression uses a send-callback serial queue. The callback means the local send layer accepted a frame, not that the remote application consumed it. If the bounded application queue is exceeded, the connection closes with `1011` instead of silently stalling or growing without limit.
 - Features have environment-variable rollback switches.
 
 ## Validation
