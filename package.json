@@ -1,0 +1,46 @@
+{
+  "name": "dsh-fastlane",
+  "version": "0.1.0",
+  "description": "Reverse proxy that makes the DeepSeek Harness web UI usable on slow links: auth hand-off, immutable asset cache with brotli, JSON recompression, diagnostics.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AksuRedapple/dsh-fastlane.git"
+  },
+  "homepage": "https://github.com/AksuRedapple/dsh-fastlane",
+  "bugs": {
+    "url": "https://github.com/AksuRedapple/dsh-fastlane/issues"
+  },
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "deepseek",
+    "dsh",
+    "reverse-proxy",
+    "web-performance",
+    "websocket",
+    "brotli"
+  ],
+  "bin": {
+    "dsh-fastlane": "./src/dsh-web-proxy.mjs"
+  },
+  "scripts": {
+    "start": "node src/dsh-web-proxy.mjs",
+    "test": "node --test tests/",
+    "verify": "node tools/verify.mjs",
+    "bench": "bash tools/bench-assets.sh http://127.0.0.1:8781"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "src/",
+    "tools/",
+    "README.md",
+    "README.zh-CN.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "ws": "^8.22.0"
+  }
+}
