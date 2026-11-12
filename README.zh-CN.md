@@ -2,6 +2,8 @@
 
 English: [README.md](README.md)
 
+联合连载：[慢链路下的网页加速](https://ouya15.cn/insights/series/dsh-fastlane.html)（三本账、四层优化、六层行程、WebSocket 与背压）
+
 > DeepSeek Harness 网页版在**慢链路/高延迟**下的加速层。一个 200 行的 Node 反向代理，坐在浏览器和 DSH 之间，只做四件事：**认证代换、静态资源缓存、可诊断、不改变任何语义**。
 
 状态：M1–M9 已在本地部署验证；M4 的代理层内容改写方案经 spike 后否决，结论见 `designs/2026-10-29-rpc-envelope-and-payload-map.md`。

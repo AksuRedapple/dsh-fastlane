@@ -4,7 +4,7 @@
 
 It sits between the browser and DSH and changes no application semantics. The proxy adds HTTP caching, Brotli variants, read-only RPC caching, optional WebSocket compression, a mobile-width injection, and observable statistics.
 
-[中文说明](README.zh-CN.md) · [Design notes](designs/) · [Changelog](CHANGELOG.md)
+[中文说明](README.zh-CN.md) · [五篇联合连载](https://ouya15.cn/insights/series/dsh-fastlane.html) · [Design notes](designs/) · [Changelog](CHANGELOG.md)
 
 ## The problem
 
