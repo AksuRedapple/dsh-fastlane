@@ -25,7 +25,7 @@
   },
   "scripts": {
     "start": "node src/dsh-web-proxy.mjs",
-    "test": "node --test tests/",
+    "test": "node --test tests/*.test.mjs",
     "verify": "node tools/verify.mjs",
     "bench": "bash tools/bench-assets.sh http://127.0.0.1:8781"
   },

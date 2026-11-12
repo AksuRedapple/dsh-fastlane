@@ -15,3 +15,4 @@ No unreleased changes yet.
 - Optional WebSocket compression with confirmation-driven serial queue and bounded backpressure.
 - Narrow-screen DOM adjustment and diagnostic status endpoint.
 - Packaged tests for proxy, cache, WebSocket, and slow-client behavior.
+- Test discovery works consistently across the Node 20 and Node 22 CI jobs.
